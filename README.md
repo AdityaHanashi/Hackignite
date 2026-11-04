@@ -4,11 +4,12 @@
 
 ---
 
-## ⚡ Theme: Professional Aesthetic Gradient (Cyberpunk Modern)
-- **Background (60%)**: Deep Midnight Obsidian & Pure Black (`#0B0F19` & `#070A12`) with smooth multi-layer radial gradient mesh
-- **Secondary / Text (30%)**: Crisp White & Off-White (`#FFFFFF`, `#E2E8F0`) with gradient text accents
-- **Signature Gradient**: Multi-stop Electric Cyan → Indigo → Neon Purple (`linear-gradient(135deg, #06B6D4 0%, #6366F1 50%, #A855F7 100%)`)
-- **Accents**: Neon Purple (`#A855F7`, `#C084FC`) and Electric Cyan (`#06B6D4`, `#22D3EE`)
+## ⚡ Theme: Modern Clean Tech (Luminous Gradient Light Theme)
+- **Background (60%)**: Clean, luminous Slate-50 (`#F8FAFC`) with soft multi-layer iridescent radial gradient atmospheric mesh
+- **Surfaces & Cards**: Pure Frosted White (`#FFFFFF`) with 1.5px iridescent gradient borders (`linear-gradient(135deg, rgba(2, 132, 199, 0.35), rgba(99, 102, 241, 0.25), rgba(124, 58, 237, 0.35))`) and smooth ambient drop shadows
+- **Typography (30%)**: High-contrast Deep Slate-900 & Slate-700 (`#0F172A`, `#334155`) with multi-stop dark gradient text headers
+- **Signature Gradient**: Electric Sky Blue → Royal Indigo → Vivid Violet (`linear-gradient(135deg, #0284C7 0%, #4F46E5 50%, #7C3AED 100%)`)
+- **Accents**: Electric Sky Blue (`#0284C7`, `#0369A1`) and Royal Violet (`#7C3AED`, `#6D28D9`)
 
 ---
 
@@ -63,7 +64,7 @@ You can simply double-click `index.html` to open it in any modern web browser or
   - Alvin: [7349190317](tel:7349190317)
   - Pallavi: [7892127598](tel:7892127598)
 - **Accommodation Assistance**: Akash ([80881 69530](tel:8088169530)), Shriraksha ([87622 33462](tel:8762233462))
-- **Transportation Incharge**: Akash (80881 69530), Omkar, Dristi (7483 480 781), Nagaveni (94804 12159)
+- **Transportation Incharge**: Zeeshan ([74834 62669](tel:7483462669)), Mayur ([96865 25841](tel:9686525841))
 - **Sponsorship & Partnerships**: Aditya (7022951232)
 - **Faculty Coordinator**: Prof. Amruta
 - **Head of Department**: Dr. Mahesh Kumar Patil

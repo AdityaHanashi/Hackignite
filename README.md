@@ -4,26 +4,26 @@
 
 ---
 
-## ⚡ Theme: The Cyberpunk Classic (High Energy)
-- **Background (60%)**: Deep Midnight Gray & Pure Black (`#0B0F19` & `#070A12`) with ambient radial glows and developer dot-matrix grid
-- **Secondary / Text (30%)**: Crisp White & Off-White (`#FFFFFF`, `#E2E8F0`)
-- **Accent 1 (Hero Accent)**: Neon Purple (`#A855F7`, `#C084FC`)
-- **Accent 2 (CTA / Highlights)**: Electric Cyan (`#06B6D4`, `#22D3EE`)
+## ⚡ Theme: Professional Aesthetic Gradient (Cyberpunk Modern)
+- **Background (60%)**: Deep Midnight Obsidian & Pure Black (`#0B0F19` & `#070A12`) with smooth multi-layer radial gradient mesh
+- **Secondary / Text (30%)**: Crisp White & Off-White (`#FFFFFF`, `#E2E8F0`) with gradient text accents
+- **Signature Gradient**: Multi-stop Electric Cyan → Indigo → Neon Purple (`linear-gradient(135deg, #06B6D4 0%, #6366F1 50%, #A855F7 100%)`)
+- **Accents**: Neon Purple (`#A855F7`, `#C084FC`) and Electric Cyan (`#06B6D4`, `#22D3EE`)
 
 ---
 
 ## 🚀 Key Highlights & Event Details
-- **Registration Window**: **04-11-2026** to **10-12-2026 (Closes at 11:00 AM sharp)**
+- **Registration Window**: **05-11-2026** to **10-12-2026 (Closes at 11:00 AM sharp)**
 - **Duration**: 24 Hours Continuous Non-Stop Build Sprint
 - **Domain**: Development (Web & App Development) — *Problem statements revealed on-spot*
 - **Team Size**: 3 to 4 members
-- **Registration Fee**: ₹2,000 per team (Non-refundable)
-- **Date**: December 2nd Week 2026
+- **Registration Fee**: ₹1,700 per team (Non-refundable)
+- **Date**: 12 - 13 December 2026
 - **Venue**: Jain College of Engineering and Technology, Sainagar Last Stop, near President Hotel, Hebbali Road, Unkal, Hubballi, Karnataka
 - **Step-by-Step Event Flow**:
-  - **Step 01 · Registration Phase**: 04-11-2026 to 10-12-2026, 11:00 AM (Registration kickoff, team formation, portal freeze)
-  - **Step 02 · Day 1 Sprint**: Volunteers report (8:30 AM), check-in & on-spot topic allocation (9:30 AM), 24h coding begins (11:00 AM), mentor checkpoint 1 (6:00 PM)
-  - **Step 03 · Day 2 Finale**: Midnight tea (1:30 AM), mentor checkpoint 2 (6:00 AM), demos (10:30 AM), code freeze (11:00 AM), closing & awards (1:00 PM)
+  - **Step 01 · Registration Phase**: 05-11-2026 to 10-12-2026, 11:00 AM (Registration kickoff, team formation, portal freeze)
+  - **Step 02 · Day 1 Sprint (12 Dec 2026)**: Volunteers report (8:30 AM), check-in & on-spot topic allocation (9:30 AM), 24h coding begins (11:00 AM), mentor checkpoint 1 (6:00 PM)
+  - **Step 03 · Day 2 Finale (13 Dec 2026)**: Midnight tea (1:30 AM), mentor checkpoint 2 (6:00 AM), demos (10:30 AM), code freeze (11:00 AM), closing & awards (1:00 PM)
 - **Evaluation**: 100 Points Framework (25 points each across Innovation, Technical Implementation, Functionality, Demo/Presentation)
 - **Prizes**: Cash Prize Pool & Certificates of Excellence for 1st Place, 2nd Place, 3rd Place, Best Implementation, and Best Project
 

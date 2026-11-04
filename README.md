@@ -1,15 +1,34 @@
-# HackIgnite 2026 🚀
+# HackIgnite 1.0 🔥
 
-**HackIgnite** is a single-page frontend website for the **National Level 24 Hours Hackathon** hosted by the **Department of Computer Science & Engineering / AIML**, Jain College of Engineering and Technology (JCET), Hubballi.
+**HackIgnite 1.0** is the official single-page frontend website for the **National Level 24 Hours Hackathon** hosted by the **Department of Computer Science & Engineering (CSE / AIML)**, Jain College of Engineering and Technology (JCET), Hubballi.
 
 ---
 
-## ⚡ Theme: Modern Clean Tech (Luminous Gradient Light Theme)
-- **Background (60%)**: Clean, luminous Slate-50 (`#F8FAFC`) with soft multi-layer iridescent radial gradient atmospheric mesh
-- **Surfaces & Cards**: Pure Frosted White (`#FFFFFF`) with 1.5px iridescent gradient borders (`linear-gradient(135deg, rgba(2, 132, 199, 0.35), rgba(99, 102, 241, 0.25), rgba(124, 58, 237, 0.35))`) and smooth ambient drop shadows
-- **Typography (30%)**: High-contrast Deep Slate-900 & Slate-700 (`#0F172A`, `#334155`) with multi-stop dark gradient text headers
-- **Signature Gradient**: Electric Sky Blue → Royal Indigo → Vivid Violet (`linear-gradient(135deg, #0284C7 0%, #4F46E5 50%, #7C3AED 100%)`)
-- **Accents**: Electric Sky Blue (`#0284C7`, `#0369A1`) and Royal Violet (`#7C3AED`, `#6D28D9`)
+## ⚡ Theme: Fiery Amber & Obsidian Gold (Official Poster Theme)
+Faithfully matching the official event poster:
+- **Background (60%)**: Deep Midnight Obsidian Navy (`#060913` / `#090E1D`) with radial fiery amber ember blooms (`#FF7A00`) and subtle laptop cyan reflections (`#38BDF8`)
+- **Surfaces & Cards**: Frosted Obsidian Glass cards (`rgba(11, 16, 32, 0.9)`) with 1.5px fiery amber & gold gradient borders (`linear-gradient(135deg, rgba(255, 122, 0, 0.6), rgba(251, 191, 36, 0.45), rgba(255, 85, 0, 0.5))`) and volumetric glow
+- **Typography (30%)**: Crisp White & Silver (`#FFFFFF`, `#F1F5F9`) with golden flame text gradients (`linear-gradient(135deg, #FFFFFF 20%, #FFF7ED 50%, #FBBF24 80%, #FF7A00 100%)`)
+- **Primary Accents**: Fiery Amber (`#FF7A00`), Radiant Gold (`#FBBF24`), Ember Orange (`#FF6B00`), and Display Glow Cyan (`#38BDF8`)
+- **Poster Eyebrows & Badges**: Glowing `// 24 HOURS HACKATHON //` amber banner and `NATIONAL LEVEL` flame pill
+
+---
+
+## 🏛️ Poster Pillars & Event Philosophy
+- **Official Motto**: `THINK • BUILD • INNOVATE • IMPACT`
+- **Mission Statement**: *"A 24-Hour Innovation Challenge to Solve Real-World Problems through Technology."*
+- **The 4 Poster Pillars**:
+  1. 🤝 **TEAM UP** — Collaborate with bright minds
+  2. 💡 **INNOVATE** — Solve real-world problems
+  3. ⚙️ **BUILD** — Create impactful solutions
+  4. 🏆 **WIN** — Get recognized & exciting opportunities
+- **5 Places to Conquer**:
+  - 🥇 1st Place
+  - 🥈 2nd Place
+  - 🥉 3rd Place
+  - 🏅 Best Implementation
+  - 🌟 Best Project
+  - *"YOUR IDEAS CAN CHANGE TOMORROW!"*
 
 ---
 
@@ -19,8 +38,8 @@
 - **Domain**: Development (Web & App Development) — *Problem statements revealed on-spot*
 - **Team Size**: 3 to 4 members
 - **Registration Fee**: ₹1,700 per team (Non-refundable)
-- **Date**: 12 - 13 December 2026
-- **Venue**: Jain College of Engineering and Technology, Sainagar Last Stop, near President Hotel, Hebbali Road, Unkal, Hubballi, Karnataka
+- **Event Date**: 12 - 13 December 2026
+- **Venue**: Jain College of Engineering and Technology, 404/4/5, Hebballi Road, Sai Nagar, Unkal, Hubballi – 580031
 - **Step-by-Step Horizontal Schedule Carousel**:
   - **Horizontal Step Flow**: Interactive horizontal scrolling cards with stepper tabs and navigation arrows.
   - **Step 01 · Registration Phase**: 05-11-2026 to 10-12-2026, 11:00 AM (Registration kickoff, team formation, portal freeze)
@@ -38,7 +57,7 @@
   9. If you face any issue or feel unsafe at any time, contact the help desk at [location] or speak to any volunteer. All complaints will be handled promptly and with confidentiality.
   10. Keep your belongings secure and carry your ID card at all times.
 - **Evaluation**: 100 Points Framework (25 points each across Innovation, Technical Implementation, Functionality, Demo/Presentation)
-- **Prizes**: Cash Prize Pool & Certificates of Excellence for 1st Place, 2nd Place, 3rd Place, Best Implementation, and Best Project
+- **Prizes**: Cash Prize Pool & Certificates of Excellence across **5 Places to Conquer**
 
 ---
 
@@ -58,14 +77,15 @@ You can simply double-click `index.html` to open it in any modern web browser or
 ---
 
 ## 📞 Event Contacts & Coordination
+- **Lead Student Coordinator**:
+  - **Aditya R H**: [7022951232](tel:7022951232)
 - **Student Coordinators**:
-  - Aditya: [7022951232](tel:7022951232)
   - Vasuki: [9743140669](tel:9743140669)
   - Alvin: [7349190317](tel:7349190317)
   - Pallavi: [7892127598](tel:7892127598)
 - **Accommodation Assistance**: Akash ([80881 69530](tel:8088169530)), Shriraksha ([87622 33462](tel:8762233462))
 - **Transportation Incharge**: Zeeshan ([74834 62669](tel:7483462669)), Mayur ([96865 25841](tel:9686525841))
-- **Sponsorship & Partnerships**: Aditya (7022951232)
+- **Sponsorship & Partnerships**: Aditya R H (7022951232)
 - **Faculty Coordinator**: Prof. Amruta
 - **Head of Department**: Dr. Mahesh Kumar Patil
 - **Principal**: Dr. Prashant Bankar

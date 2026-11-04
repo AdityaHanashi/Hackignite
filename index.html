@@ -102,11 +102,13 @@
       -moz-osx-font-smoothing: grayscale;
       overflow-x: hidden;
       background-image: 
-        radial-gradient(circle at 12% 15%, rgba(99, 102, 241, 0.12) 0%, transparent 45%),
-        radial-gradient(circle at 88% 25%, rgba(6, 182, 212, 0.12) 0%, transparent 45%),
-        radial-gradient(circle at 50% 75%, rgba(168, 85, 247, 0.08) 0%, transparent 55%),
-        radial-gradient(circle at 1px 1px, rgba(226, 232, 240, 0.04) 1px, transparent 0);
-      background-size: 100% 100%, 100% 100%, 100% 100%, 36px 36px;
+        radial-gradient(circle at 10% 12%, rgba(6, 182, 212, 0.22) 0%, transparent 42%),
+        radial-gradient(circle at 90% 18%, rgba(168, 85, 247, 0.24) 0%, transparent 45%),
+        radial-gradient(circle at 50% 50%, rgba(99, 102, 241, 0.18) 0%, transparent 55%),
+        radial-gradient(circle at 85% 82%, rgba(6, 182, 212, 0.2) 0%, transparent 42%),
+        radial-gradient(circle at 15% 88%, rgba(236, 72, 153, 0.15) 0%, transparent 48%),
+        radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.05) 1px, transparent 0);
+      background-size: 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 32px 32px;
       background-attachment: fixed;
     }
 
@@ -2040,6 +2042,300 @@
         width: 100%;
       }
     }
+
+    /* ==========================================================================
+       UNIVERSAL GRADIENT CARDS & REDESIGN TOKENS
+       ========================================================================== */
+    .hero-meta-card, .about-card, .domain-card, .reg-wrapper, .step-card, .rule-card, .criteria-card, .logistics-card, .contact-card, .sponsors-announcement-card, .day-column {
+      background: linear-gradient(145deg, rgba(16, 24, 45, 0.88) 0%, rgba(22, 16, 42, 0.78) 50%, rgba(9, 13, 26, 0.95) 100%) !important;
+      border: 1.5px solid transparent !important;
+      background-image: linear-gradient(rgba(13, 19, 36, 0.92), rgba(9, 13, 26, 0.96)), linear-gradient(135deg, rgba(6, 182, 212, 0.55), rgba(99, 102, 241, 0.45), rgba(168, 85, 247, 0.55)) !important;
+      background-origin: border-box !important;
+      background-clip: padding-box, border-box !important;
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.65), inset 0 1px 1px rgba(255, 255, 255, 0.15), 0 0 25px rgba(6, 182, 212, 0.14) !important;
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+
+    .hero-meta-card:hover, .about-card:hover, .domain-card:hover, .reg-wrapper:hover, .step-card:hover, .rule-card:hover, .criteria-card:hover, .logistics-card:hover, .contact-card:hover, .sponsors-announcement-card:hover, .day-column:hover {
+      transform: translateY(-5px) !important;
+      background-image: linear-gradient(rgba(18, 26, 50, 0.94), rgba(12, 16, 32, 0.98)), linear-gradient(135deg, #06B6D4, #818CF8, #A855F7) !important;
+      box-shadow: 0 20px 48px rgba(0, 0, 0, 0.75), 0 0 35px rgba(6, 182, 212, 0.4), 0 0 25px rgba(168, 85, 247, 0.3) !important;
+    }
+
+    /* Gradient Section Titles */
+    .section-title {
+      background: linear-gradient(135deg, #FFFFFF 20%, #E0F2FE 45%, #C084FC 75%, #38BDF8 100%) !important;
+      -webkit-background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
+      display: inline-block;
+    }
+
+    /* Checkpoint Traveling Scroll HUD & Views */
+    .checkpoint-travel-hud {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      background: linear-gradient(135deg, rgba(16, 24, 48, 0.92) 0%, rgba(22, 16, 42, 0.92) 100%);
+      border: 1.5px solid transparent;
+      background-image: linear-gradient(rgba(14, 20, 38, 0.95), rgba(10, 14, 28, 0.98)), linear-gradient(135deg, #06B6D4, #6366F1, #A855F7);
+      background-origin: border-box;
+      background-clip: padding-box, border-box;
+      border-radius: var(--radius-md);
+      padding: 18px 26px;
+      margin-bottom: 28px;
+      box-shadow: 0 12px 34px rgba(0, 0, 0, 0.55), 0 0 22px rgba(6, 182, 212, 0.2);
+      flex-wrap: wrap;
+    }
+
+    .hud-left {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .hud-pulse-radar {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: #22D3EE;
+      box-shadow: 0 0 0 0 rgba(34, 211, 238, 0.7);
+      animation: pulseCyan 1.8s infinite;
+    }
+
+    .hud-title {
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: #FFFFFF;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      font-family: var(--font-code);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .hud-subtitle {
+      font-size: 0.84rem;
+      color: var(--electric-cyan-light);
+      font-weight: 500;
+      margin-top: 2px;
+    }
+
+    .hud-progress-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-grow: 1;
+      max-width: 420px;
+    }
+
+    .hud-progress-bar {
+      flex: 1;
+      height: 9px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.1);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .hud-progress-fill {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, #06B6D4 0%, #6366F1 50%, #A855F7 80%, #EC4899 100%);
+      border-radius: 999px;
+      box-shadow: 0 0 12px rgba(6, 182, 212, 0.8);
+      transition: width 0.15s ease-out;
+    }
+
+    .hud-progress-pct {
+      font-family: var(--font-code);
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: #22D3EE;
+      min-width: 48px;
+      text-align: right;
+    }
+
+    /* Switcher between Traveling Roadmap & Cards */
+    .schedule-view-switcher {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+    }
+
+    .sched-switch-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(16, 24, 45, 0.85);
+      border: 1.5px solid rgba(6, 182, 212, 0.3);
+      padding: 9px 20px;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--text-offwhite);
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+
+    .sched-switch-btn:hover {
+      border-color: var(--electric-cyan);
+      box-shadow: 0 0 16px rgba(6, 182, 212, 0.3);
+      color: #FFFFFF;
+    }
+
+    .sched-switch-btn.active {
+      background: linear-gradient(135deg, rgba(6, 182, 212, 0.25), rgba(168, 85, 247, 0.25));
+      border-color: var(--electric-cyan-light);
+      color: #FFFFFF;
+      box-shadow: 0 0 20px rgba(6, 182, 212, 0.4);
+    }
+
+    /* Checkpoint Traveling Scroll Track & Traveler */
+    .timeline {
+      position: relative;
+      padding-left: 36px;
+    }
+
+    .timeline::before {
+      display: none !important; /* replaced by traveling rail */
+    }
+
+    .timeline-travel-rail {
+      position: absolute;
+      top: 10px;
+      bottom: 10px;
+      left: 11px;
+      width: 4px;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 999px;
+      overflow: visible;
+      z-index: 1;
+    }
+
+    .timeline-travel-fill {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 0%;
+      background: linear-gradient(to bottom, #06B6D4 0%, #6366F1 50%, #A855F7 80%, #EC4899 100%);
+      border-radius: 999px;
+      box-shadow: 0 0 14px rgba(6, 182, 212, 0.8), 0 0 24px rgba(168, 85, 247, 0.7);
+      transition: height 0.12s ease-out;
+    }
+
+    .timeline-traveler-orb {
+      position: absolute;
+      top: 0%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #FFFFFF;
+      box-shadow: 0 0 16px #06B6D4, 0 0 32px #A855F7, 0 0 45px rgba(236, 72, 153, 0.8);
+      z-index: 10;
+      pointer-events: none;
+      transition: top 0.12s ease-out;
+    }
+
+    .traveler-orb-core {
+      position: absolute;
+      inset: 3px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #06B6D4, #A855F7);
+    }
+
+    .traveler-orb-ripple {
+      position: absolute;
+      inset: -6px;
+      border-radius: 50%;
+      border: 2px solid rgba(6, 182, 212, 0.75);
+      animation: travelerPulse 1.8s infinite;
+    }
+
+    @keyframes travelerPulse {
+      0% { transform: scale(0.8); opacity: 1; }
+      100% { transform: scale(2.4); opacity: 0; }
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 26px;
+      padding: 10px 14px;
+      border-radius: var(--radius-sm);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      border: 1px solid transparent;
+    }
+
+    .timeline-item.checkpoint-active {
+      background: linear-gradient(135deg, rgba(6, 182, 212, 0.14) 0%, rgba(168, 85, 247, 0.14) 100%);
+      border-color: rgba(6, 182, 212, 0.4);
+      box-shadow: 0 4px 20px rgba(6, 182, 212, 0.25), inset 0 0 15px rgba(168, 85, 247, 0.12);
+      transform: translateX(6px);
+    }
+
+    .timeline-dot {
+      position: absolute;
+      left: -33px;
+      top: 14px;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: #0B0F19;
+      border: 3px solid rgba(148, 163, 184, 0.35);
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+      transition: all 0.3s ease;
+      z-index: 4;
+    }
+
+    .timeline-item.checkpoint-active .timeline-dot {
+      border-color: #22D3EE;
+      background: linear-gradient(135deg, #06B6D4, #A855F7);
+      box-shadow: 0 0 16px rgba(6, 182, 212, 0.9), 0 0 25px rgba(168, 85, 247, 0.8);
+      transform: scale(1.3);
+    }
+
+    .mentor-checkpoint-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.72rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-family: var(--font-code);
+      padding: 3px 10px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, rgba(6, 182, 212, 0.25), rgba(168, 85, 247, 0.25));
+      border: 1px solid #06B6D4;
+      color: #22D3EE;
+      margin-left: 8px;
+      box-shadow: 0 0 14px rgba(6, 182, 212, 0.4);
+      animation: pulseCyan 2s infinite;
+    }
+
+    /* Traveling roadmap mode on schedule track */
+    .schedule-scroll-track.travel-roadmap-mode {
+      display: flex;
+      flex-direction: column;
+      gap: 36px;
+      overflow-x: visible;
+      padding: 12px 0 32px 0;
+    }
+
+    .schedule-scroll-track.travel-roadmap-mode .step-phase-card {
+      flex: 1 1 100%;
+      min-width: 100%;
+      width: 100%;
+    }
   </style>
 </head>
 <body>
@@ -2389,6 +2685,43 @@
           <p class="section-subtitle">From registration kickoff to the grand finale — follow the step-by-step event journey.</p>
         </div>
 
+        <!-- Checkpoint Scroll Traveler Status HUD -->
+        <div class="checkpoint-travel-hud">
+          <div class="hud-left">
+            <span class="hud-pulse-radar"></span>
+            <div>
+              <div class="hud-title">
+                <span>Checkpoint Travel Engine</span>
+                <span style="font-size: 0.75rem; background: rgba(6, 182, 212, 0.2); color: #22D3EE; padding: 2px 8px; border-radius: 999px; border: 1px solid rgba(6, 182, 212, 0.4);">LIVE SCROLL</span>
+              </div>
+              <div class="hud-subtitle" id="checkpointStatusText">Scroll down to travel through checkpoints</div>
+            </div>
+          </div>
+          <div class="hud-progress-wrapper">
+            <div class="hud-progress-bar">
+              <div class="hud-progress-fill" id="travelMeterFill"></div>
+            </div>
+            <span class="hud-progress-pct" id="travelMeterPct">0%</span>
+          </div>
+        </div>
+
+        <!-- View Switcher: Traveling Flow vs Cards -->
+        <div class="schedule-view-switcher">
+          <button class="sched-switch-btn active" id="btnSwitchTravel" type="button" aria-label="Traveling Roadmap View">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polyline>
+            </svg>
+            <span>⚡ Traveling Checkpoint Flow</span>
+          </button>
+          <button class="sched-switch-btn" id="btnSwitchCards" type="button" aria-label="Step Cards Carousel View">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="9" y1="3" x2="9" y2="21"></line>
+            </svg>
+            <span>📑 Step Cards Carousel</span>
+          </button>
+        </div>
+
         <!-- Step-by-Step Navigation Stepper -->
         <div class="schedule-stepper" id="scheduleStepper">
           <button class="step-nav-btn active" data-step="0" aria-label="Go to Step 1: Registration Phase">
@@ -2439,7 +2772,7 @@
         </div>
 
         <!-- Step-by-Step Scroll Container -->
-        <div class="schedule-scroll-track" id="scheduleTrack">
+        <div class="schedule-scroll-track travel-roadmap-mode" id="scheduleTrack">
           
           <!-- STEP 1: REGISTRATION PHASE -->
           <div class="day-column step-phase-card" id="stepRegistration">
@@ -2451,7 +2784,14 @@
               <span class="day-badge">05-11-2026 to 10-12-2026 · 11:00 AM</span>
             </div>
 
-            <div class="timeline">
+                        <div class="timeline">
+              <div class="timeline-travel-rail">
+                <div class="timeline-travel-fill"></div>
+                <div class="timeline-traveler-orb">
+                  <span class="traveler-orb-core"></span>
+                  <span class="traveler-orb-ripple"></span>
+                </div>
+              </div>
               <div class="timeline-item highlight-dot">
                 <div class="timeline-dot"></div>
                 <div class="timeline-time">05-11-2026</div>
@@ -2488,7 +2828,14 @@
               <span class="day-badge">12 December 2026 · Day 1</span>
             </div>
 
-            <div class="timeline">
+                        <div class="timeline">
+              <div class="timeline-travel-rail">
+                <div class="timeline-travel-fill"></div>
+                <div class="timeline-traveler-orb">
+                  <span class="traveler-orb-core"></span>
+                  <span class="traveler-orb-ripple"></span>
+                </div>
+              </div>
               <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="timeline-time">8:30 AM</div>
@@ -2516,7 +2863,7 @@
               <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="timeline-time">6:00 PM to 7:30 PM</div>
-                <div class="timeline-desc">Mentor checkpoint 1 (Guidance &amp; Review)</div>
+                <div class="timeline-desc">Mentor checkpoint 1 (Guidance &amp; Review) <span class="mentor-checkpoint-badge">⚡ MENTOR CHECKPOINT 1</span></div>
               </div>
 
               <div class="timeline-item">
@@ -2537,7 +2884,14 @@
               <span class="day-badge">13 December 2026 · Day 2</span>
             </div>
 
-            <div class="timeline">
+                        <div class="timeline">
+              <div class="timeline-travel-rail">
+                <div class="timeline-travel-fill"></div>
+                <div class="timeline-traveler-orb">
+                  <span class="traveler-orb-core"></span>
+                  <span class="traveler-orb-ripple"></span>
+                </div>
+              </div>
               <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="timeline-time">1:30 AM</div>
@@ -2547,7 +2901,7 @@
               <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="timeline-time">6:00 AM to 7:00 AM</div>
-                <div class="timeline-desc">Mentor checkpoint 2 (Final sprint guidance)</div>
+                <div class="timeline-desc">Mentor checkpoint 2 (Final sprint guidance) <span class="mentor-checkpoint-badge">⚡ MENTOR CHECKPOINT 2</span></div>
               </div>
 
               <div class="timeline-item">
@@ -3232,7 +3586,86 @@
         });
       }, { passive: true });
 
-      // 6. Step-by-Step Schedule Scrolling & Stepper Controls
+      // 6. Checkpoint Traveling Scroll Engine
+      const scheduleSec = document.getElementById('schedule');
+      const travelMeterFill = document.getElementById('travelMeterFill');
+      const travelMeterPct = document.getElementById('travelMeterPct');
+      const checkpointStatusText = document.getElementById('checkpointStatusText');
+      const scheduleTrackEl = document.getElementById('scheduleTrack');
+      const btnSwitchTravel = document.getElementById('btnSwitchTravel');
+      const btnSwitchCards = document.getElementById('btnSwitchCards');
+
+      // Switcher between Traveling Roadmap and Cards Carousel
+      if (btnSwitchTravel && btnSwitchCards && scheduleTrackEl) {
+        btnSwitchTravel.addEventListener('click', () => {
+          btnSwitchTravel.classList.add('active');
+          btnSwitchCards.classList.remove('active');
+          scheduleTrackEl.classList.add('travel-roadmap-mode');
+          updateCheckpointTravel();
+        });
+        btnSwitchCards.addEventListener('click', () => {
+          btnSwitchCards.classList.add('active');
+          btnSwitchTravel.classList.remove('active');
+          scheduleTrackEl.classList.remove('travel-roadmap-mode');
+          updateCheckpointTravel();
+        });
+      }
+
+      function updateCheckpointTravel() {
+        if (!scheduleSec) return;
+        const rect = scheduleSec.getBoundingClientRect();
+        const winH = window.innerHeight;
+        
+        // Progress through schedule section
+        const totalDist = rect.height;
+        const currentDist = (winH * 0.45) - rect.top;
+        const progress = Math.min(1, Math.max(0, currentDist / totalDist));
+        const pct = Math.round(progress * 100);
+
+        if (travelMeterFill) travelMeterFill.style.width = pct + '%';
+        if (travelMeterPct) travelMeterPct.textContent = pct + '%';
+
+        // Update each timeline rail
+        document.querySelectorAll('.timeline').forEach((timeline) => {
+          const tRect = timeline.getBoundingClientRect();
+          const tProgress = Math.min(1, Math.max(0, (winH * 0.52 - tRect.top) / tRect.height));
+          const fill = timeline.querySelector('.timeline-travel-fill');
+          const orb = timeline.querySelector('.timeline-traveler-orb');
+          if (fill) fill.style.height = (tProgress * 100) + '%';
+          if (orb) orb.style.top = (tProgress * 100) + '%';
+
+          // Activate items
+          const items = timeline.querySelectorAll('.timeline-item');
+          items.forEach(item => {
+            const iRect = item.getBoundingClientRect();
+            if (iRect.top <= winH * 0.58) {
+              item.classList.add('checkpoint-active');
+            } else {
+              item.classList.remove('checkpoint-active');
+            }
+          });
+        });
+
+        // Update latest active checkpoint label in HUD
+        const activeItems = document.querySelectorAll('.timeline-item.checkpoint-active');
+        if (activeItems.length > 0) {
+          const lastActive = activeItems[activeItems.length - 1];
+          const timeEl = lastActive.querySelector('.timeline-time');
+          const descEl = lastActive.querySelector('.timeline-desc');
+          if (timeEl && descEl && checkpointStatusText) {
+            const cleanDesc = descEl.innerText.replace(/⚡ MENTOR CHECKPOINT \d/g, '').trim();
+            checkpointStatusText.textContent = `📍 Traveling Checkpoint: ${timeEl.innerText.trim()} — ${cleanDesc}`;
+          }
+        } else if (checkpointStatusText) {
+          checkpointStatusText.textContent = 'Scroll down to travel through checkpoints';
+        }
+      }
+
+      window.addEventListener('scroll', updateCheckpointTravel, { passive: true });
+      window.addEventListener('resize', updateCheckpointTravel, { passive: true });
+      setTimeout(updateCheckpointTravel, 100);
+
+      // 7. Step-by-Step Schedule Scrolling & Stepper Controls
       const scheduleTrack = document.getElementById('scheduleTrack');
       const stepBtns = document.querySelectorAll('.step-nav-btn');
       const stepDots = document.querySelectorAll('.sched-dot');

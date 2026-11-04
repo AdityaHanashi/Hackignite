@@ -13,12 +13,17 @@
 ---
 
 ## 🚀 Key Highlights & Event Details
+- **Registration Window**: **04-11-2026** to **10-12-2026 (Closes at 11:00 AM sharp)**
 - **Duration**: 24 Hours Continuous Non-Stop Build Sprint
 - **Domain**: Development (Web & App Development) — *Problem statements revealed on-spot*
 - **Team Size**: 3 to 4 members
 - **Registration Fee**: ₹2,000 per team (Non-refundable)
 - **Date**: December 2nd Week 2026
 - **Venue**: Jain College of Engineering and Technology, Sainagar Last Stop, near President Hotel, Hebbali Road, Unkal, Hubballi, Karnataka
+- **Step-by-Step Event Flow**:
+  - **Step 01 · Registration Phase**: 04-11-2026 to 10-12-2026, 11:00 AM (Registration kickoff, team formation, portal freeze)
+  - **Step 02 · Day 1 Sprint**: Volunteers report (8:30 AM), check-in & on-spot topic allocation (9:30 AM), 24h coding begins (11:00 AM), mentor checkpoint 1 (6:00 PM)
+  - **Step 03 · Day 2 Finale**: Midnight tea (1:30 AM), mentor checkpoint 2 (6:00 AM), demos (10:30 AM), code freeze (11:00 AM), closing & awards (1:00 PM)
 - **Evaluation**: 100 Points Framework (25 points each across Innovation, Technical Implementation, Functionality, Demo/Presentation)
 - **Prizes**: Cash Prize Pool & Certificates of Excellence for 1st Place, 2nd Place, 3rd Place, Best Implementation, and Best Project
 

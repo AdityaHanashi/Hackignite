@@ -948,19 +948,254 @@
     }
 
     /* ==========================================================================
-       5. SCHEDULE SECTION (VERTICAL TIMELINE)
+       5. SCHEDULE SECTION (STEP-BY-STEP EVENT FLOW)
        ========================================================================== */
-    .schedule-container {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
+    .schedule-stepper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      margin-bottom: 28px;
+      flex-wrap: wrap;
     }
 
-    @media (max-width: 900px) {
-      .schedule-container {
-        grid-template-columns: 1fr;
-        gap: 48px;
+    .step-nav-btn {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: rgba(17, 24, 39, 0.7);
+      border: 1.5px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 12px 20px;
+      cursor: pointer;
+      color: var(--text-offwhite);
+      transition: all 0.25s ease;
+      text-align: left;
+    }
+
+    .step-nav-btn:hover {
+      border-color: var(--electric-cyan);
+      box-shadow: 0 0 16px rgba(6, 182, 212, 0.25);
+      transform: translateY(-2px);
+    }
+
+    .step-nav-btn.active {
+      background: linear-gradient(135deg, rgba(6, 182, 212, 0.18), rgba(168, 85, 247, 0.18));
+      border-color: var(--electric-cyan);
+      box-shadow: 0 0 25px rgba(6, 182, 212, 0.35);
+    }
+
+    .step-nav-num {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      background: rgba(6, 182, 212, 0.15);
+      color: var(--electric-cyan-light);
+      font-weight: 800;
+      font-size: 0.95rem;
+      font-family: var(--font-code);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--border-cyan);
+    }
+
+    .step-nav-btn.active .step-nav-num {
+      background: linear-gradient(135deg, var(--electric-cyan), var(--neon-purple));
+      color: #FFFFFF;
+      box-shadow: 0 0 10px rgba(6, 182, 212, 0.5);
+    }
+
+    .step-nav-info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .step-nav-title {
+      font-family: var(--font-heading);
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-white);
+      line-height: 1.2;
+    }
+
+    .step-nav-sub {
+      font-size: 0.78rem;
+      color: var(--electric-cyan-light);
+      font-weight: 500;
+      font-family: var(--font-code);
+    }
+
+    .step-nav-line {
+      width: 36px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--electric-cyan), var(--neon-purple));
+      opacity: 0.6;
+    }
+
+    @media (max-width: 860px) {
+      .step-nav-line {
+        display: none;
       }
+      .step-nav-btn {
+        flex: 1 1 calc(50% - 10px);
+      }
+    }
+
+    @media (max-width: 540px) {
+      .step-nav-btn {
+        flex: 1 1 100%;
+      }
+    }
+
+    .schedule-controls-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 18px;
+      padding: 0 4px;
+    }
+
+    .schedule-scroll-hint {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+
+    .schedule-scroll-hint svg {
+      color: var(--electric-cyan-light);
+      animation: nudgeX 1.5s infinite ease-in-out;
+    }
+
+    @keyframes nudgeX {
+      0%, 100% { transform: translateX(0); }
+      50% { transform: translateX(5px); }
+    }
+
+    .schedule-arrow-btns {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .sched-arrow-btn {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: rgba(17, 24, 39, 0.9);
+      border: 1px solid var(--border-cyan);
+      color: var(--electric-cyan-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .sched-arrow-btn:hover {
+      background: var(--electric-cyan);
+      color: #0B0F19;
+      box-shadow: 0 0 15px rgba(6, 182, 212, 0.5);
+      transform: scale(1.05);
+    }
+
+    .schedule-scroll-track {
+      display: flex;
+      gap: 28px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      scroll-behavior: smooth;
+      padding: 8px 4px 20px 4px;
+    }
+
+    .schedule-scroll-track::-webkit-scrollbar {
+      height: 6px;
+    }
+
+    .schedule-scroll-track::-webkit-scrollbar-track {
+      background: rgba(11, 15, 25, 0.6);
+      border-radius: 999px;
+    }
+
+    .schedule-scroll-track::-webkit-scrollbar-thumb {
+      background: linear-gradient(90deg, var(--electric-cyan), var(--neon-purple));
+      border-radius: 999px;
+    }
+
+    .step-phase-card {
+      flex: 0 0 calc(33.333% - 19px);
+      min-width: 320px;
+      scroll-snap-align: start;
+      scroll-snap-stop: always;
+      display: flex;
+      flex-direction: column;
+    }
+
+    @media (max-width: 1100px) {
+      .step-phase-card {
+        flex: 0 0 calc(50% - 14px);
+        min-width: 310px;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .step-phase-card {
+        flex: 0 0 90%;
+        min-width: 290px;
+      }
+    }
+
+    .step-stage-pill {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-family: var(--font-code);
+      padding: 3px 10px;
+      border-radius: 999px;
+      margin-bottom: 6px;
+    }
+
+    .step-stage-pill.cyan {
+      background: rgba(6, 182, 212, 0.18);
+      color: var(--electric-cyan-light);
+      border: 1px solid var(--border-cyan);
+    }
+
+    .step-stage-pill.purple {
+      background: rgba(168, 85, 247, 0.18);
+      color: var(--neon-purple-light);
+      border: 1px solid var(--border-purple);
+    }
+
+    .schedule-dots {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .sched-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: rgba(148, 163, 184, 0.25);
+      border: none;
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+
+    .sched-dot.active {
+      width: 28px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--electric-cyan), var(--neon-purple));
+      box-shadow: 0 0 10px rgba(6, 182, 212, 0.5);
     }
 
     .day-column {
@@ -2075,6 +2310,23 @@
                 <div class="reg-tile-sub" style="color: var(--text-muted);">Collaborative squad</div>
               </div>
             </div>
+
+            <div class="reg-info-tile">
+              <div class="reg-tile-icon">
+                <!-- Calendar Icon -->
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="16" y1="2" x2="16" y2="6"></line>
+                  <line x1="8" y1="2" x2="8" y2="6"></line>
+                  <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+              </div>
+              <div>
+                <div class="reg-tile-label">Registration Window</div>
+                <div class="reg-tile-value">04-11-26 to 10-12-26</div>
+                <div class="reg-tile-sub">Closes 11:00 AM</div>
+              </div>
+            </div>
           </div>
 
           <!-- Registration Steps -->
@@ -2115,21 +2367,112 @@
     </section>
 
     <!-- ======================================================================
-         5. SCHEDULE SECTION
+         5. SCHEDULE SECTION (STEP-BY-STEP EVENT FLOW)
          ====================================================================== -->
     <section class="section" id="schedule">
       <div class="container fade-in">
         <div class="section-header">
-          <span class="section-eyebrow">Itinerary</span>
-          <h2 class="section-title">Schedule</h2>
-          <p class="section-subtitle">24-hour timeline across Day 1 and Day 2 (December 2nd Week 2026).</p>
+          <span class="section-eyebrow">Complete Event Roadmap</span>
+          <h2 class="section-title">Schedule &amp; Event Flow</h2>
+          <p class="section-subtitle">From registration kickoff to the grand finale — follow the step-by-step event journey.</p>
         </div>
 
-        <div class="schedule-container">
-          <!-- DAY 1 -->
-          <div class="day-column">
+        <!-- Step-by-Step Navigation Stepper -->
+        <div class="schedule-stepper" id="scheduleStepper">
+          <button class="step-nav-btn active" data-step="0" aria-label="Go to Step 1: Registration Phase">
+            <span class="step-nav-num">01</span>
+            <div class="step-nav-info">
+              <span class="step-nav-title">Registration Phase</span>
+              <span class="step-nav-sub">04-11-26 to 10-12-26 · 11 AM</span>
+            </div>
+          </button>
+          <div class="step-nav-line"></div>
+          <button class="step-nav-btn" data-step="1" aria-label="Go to Step 2: Hackathon Day 1">
+            <span class="step-nav-num">02</span>
+            <div class="step-nav-info">
+              <span class="step-nav-title">Day 1: Build Sprint</span>
+              <span class="step-nav-sub">Dec 2nd Week · Coding Kickoff</span>
+            </div>
+          </button>
+          <div class="step-nav-line"></div>
+          <button class="step-nav-btn" data-step="2" aria-label="Go to Step 3: Hackathon Day 2">
+            <span class="step-nav-num">03</span>
+            <div class="step-nav-info">
+              <span class="step-nav-title">Day 2: Grand Finale</span>
+              <span class="step-nav-sub">Dec 2nd Week · Demos &amp; Awards</span>
+            </div>
+          </button>
+        </div>
+
+        <!-- Step Scroll Controls & Hint -->
+        <div class="schedule-controls-row">
+          <span class="schedule-scroll-hint">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+            Swipe or scroll horizontally step-by-step
+          </span>
+          <div class="schedule-arrow-btns">
+            <button class="sched-arrow-btn" id="schedPrev" aria-label="Previous step">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="15 18 9 12 15 6"></polyline>
+              </svg>
+            </button>
+            <button class="sched-arrow-btn" id="schedNext" aria-label="Next step">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Step-by-Step Scroll Container -->
+        <div class="schedule-scroll-track" id="scheduleTrack">
+          
+          <!-- STEP 1: REGISTRATION PHASE -->
+          <div class="day-column step-phase-card" id="stepRegistration">
             <div class="day-header">
-              <h3 class="day-title">Day 1</h3>
+              <div>
+                <span class="step-stage-pill cyan">Step 01</span>
+                <h3 class="day-title">Registration</h3>
+              </div>
+              <span class="day-badge">04-11-2026 to 10-12-2026 · 11:00 AM</span>
+            </div>
+
+            <div class="timeline">
+              <div class="timeline-item highlight-dot">
+                <div class="timeline-dot"></div>
+                <div class="timeline-time">04-11-2026</div>
+                <div class="timeline-desc"><strong>Online Registration Opens</strong> on Unstop</div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-time">Team Formation</div>
+                <div class="timeline-desc">Assemble your collaborative squad of 3 to 4 students for the Web &amp; App track</div>
+              </div>
+
+              <div class="timeline-item highlight-dot">
+                <div class="timeline-dot"></div>
+                <div class="timeline-time">10-12-2026 · 11:00 AM</div>
+                <div class="timeline-desc"><strong>Registration Closes (Hard Deadline at 11:00 AM)</strong> — Portal closes &amp; final verification</div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-time">Pre-Event Check-in</div>
+                <div class="timeline-desc">Confirmation passes &amp; campus arrival guidelines sent to all registered teams</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP 2: DAY 1 SPRINT -->
+          <div class="day-column step-phase-card" id="stepDay1">
+            <div class="day-header">
+              <div>
+                <span class="step-stage-pill purple">Step 02</span>
+                <h3 class="day-title">Day 1</h3>
+              </div>
               <span class="day-badge">December 2nd Week · Day 1</span>
             </div>
 
@@ -2143,39 +2486,42 @@
               <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="timeline-time">9:30 AM</div>
-                <div class="timeline-desc">Check-in and topic allocation</div>
+                <div class="timeline-desc">Check-in and topic allocation on spot</div>
               </div>
 
               <div class="timeline-item highlight-dot">
                 <div class="timeline-dot"></div>
                 <div class="timeline-time">11:00 AM</div>
-                <div class="timeline-desc"><strong>Opening ceremony and coding begins</strong></div>
+                <div class="timeline-desc"><strong>Opening ceremony and 24h coding sprint begins</strong></div>
               </div>
 
               <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="timeline-time">2:00 PM</div>
-                <div class="timeline-desc">Lunch</div>
+                <div class="timeline-desc">Lunch break</div>
               </div>
 
               <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="timeline-time">6:00 PM to 7:30 PM</div>
-                <div class="timeline-desc">Mentor checkpoint 1</div>
+                <div class="timeline-desc">Mentor checkpoint 1 (Guidance &amp; Review)</div>
               </div>
 
               <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="timeline-time">8:30 PM</div>
-                <div class="timeline-desc">Dinner</div>
+                <div class="timeline-desc">Dinner break</div>
               </div>
             </div>
           </div>
 
-          <!-- DAY 2 -->
-          <div class="day-column">
+          <!-- STEP 3: DAY 2 FINALE -->
+          <div class="day-column step-phase-card" id="stepDay2">
             <div class="day-header">
-              <h3 class="day-title">Day 2</h3>
+              <div>
+                <span class="step-stage-pill cyan">Step 03</span>
+                <h3 class="day-title">Day 2</h3>
+              </div>
               <span class="day-badge">December 2nd Week · Day 2</span>
             </div>
 
@@ -2183,13 +2529,13 @@
               <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="timeline-time">1:30 AM</div>
-                <div class="timeline-desc">Night refreshments</div>
+                <div class="timeline-desc">Night refreshments &amp; midnight tea</div>
               </div>
 
               <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="timeline-time">6:00 AM to 7:00 AM</div>
-                <div class="timeline-desc">Mentor checkpoint 2</div>
+                <div class="timeline-desc">Mentor checkpoint 2 (Final sprint guidance)</div>
               </div>
 
               <div class="timeline-item">
@@ -2201,23 +2547,32 @@
               <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="timeline-time">10:30 AM</div>
-                <div class="timeline-desc">Project demos</div>
+                <div class="timeline-desc">Project demos &amp; jury evaluation</div>
               </div>
 
               <div class="timeline-item highlight-dot">
                 <div class="timeline-dot"></div>
                 <div class="timeline-time">11:00 AM</div>
-                <div class="timeline-desc"><strong>Code freeze and submission deadline</strong></div>
+                <div class="timeline-desc"><strong>Code freeze and GitHub repository submission deadline</strong></div>
               </div>
 
-              <div class="timeline-item">
+              <div class="timeline-item highlight-dot">
                 <div class="timeline-dot"></div>
                 <div class="timeline-time">1:00 PM</div>
-                <div class="timeline-desc">Results, prize distribution, and closing ceremony</div>
+                <div class="timeline-desc"><strong>Results, prize distribution, and closing ceremony</strong></div>
               </div>
             </div>
           </div>
+
         </div>
+
+        <!-- Step Dots Indicator -->
+        <div class="schedule-dots" id="scheduleDots">
+          <button class="sched-dot active" data-step="0" aria-label="Step 1: Registration"></button>
+          <button class="sched-dot" data-step="1" aria-label="Step 2: Day 1"></button>
+          <button class="sched-dot" data-step="2" aria-label="Step 3: Day 2"></button>
+        </div>
+
       </div>
     </section>
 
@@ -2864,6 +3219,79 @@
           }
         });
       }, { passive: true });
+
+      // 6. Step-by-Step Schedule Scrolling & Stepper Controls
+      const scheduleTrack = document.getElementById('scheduleTrack');
+      const stepBtns = document.querySelectorAll('.step-nav-btn');
+      const stepDots = document.querySelectorAll('.sched-dot');
+      const schedPrev = document.getElementById('schedPrev');
+      const schedNext = document.getElementById('schedNext');
+      const phaseCards = document.querySelectorAll('.step-phase-card');
+
+      if (scheduleTrack && phaseCards.length > 0) {
+        const updateActiveStep = (index) => {
+          stepBtns.forEach((btn, idx) => {
+            btn.classList.toggle('active', idx === index);
+          });
+          stepDots.forEach((dot, idx) => {
+            dot.classList.toggle('active', idx === index);
+          });
+        };
+
+        const scrollToStep = (index) => {
+          if (phaseCards[index]) {
+            phaseCards[index].scrollIntoView({
+              behavior: 'smooth',
+              block: 'nearest',
+              inline: 'start'
+            });
+            updateActiveStep(index);
+          }
+        };
+
+        stepBtns.forEach((btn) => {
+          btn.addEventListener('click', () => {
+            const stepIndex = parseInt(btn.getAttribute('data-step'), 10);
+            scrollToStep(stepIndex);
+          });
+        });
+
+        stepDots.forEach((dot) => {
+          dot.addEventListener('click', () => {
+            const stepIndex = parseInt(dot.getAttribute('data-step'), 10);
+            scrollToStep(stepIndex);
+          });
+        });
+
+        if (schedPrev && schedNext) {
+          schedPrev.addEventListener('click', () => {
+            scheduleTrack.scrollBy({ left: -340, behavior: 'smooth' });
+          });
+          schedNext.addEventListener('click', () => {
+            scheduleTrack.scrollBy({ left: 340, behavior: 'smooth' });
+          });
+        }
+
+        // Sync active indicator on user manual scrolling
+        let scrollTimeout;
+        scheduleTrack.addEventListener('scroll', () => {
+          clearTimeout(scrollTimeout);
+          scrollTimeout = setTimeout(() => {
+            const trackRect = scheduleTrack.getBoundingClientRect();
+            let closestIndex = 0;
+            let minDiff = Infinity;
+            phaseCards.forEach((card, idx) => {
+              const cardRect = card.getBoundingClientRect();
+              const diff = Math.abs(cardRect.left - trackRect.left);
+              if (diff < minDiff) {
+                minDiff = diff;
+                closestIndex = idx;
+              }
+            });
+            updateActiveStep(closestIndex);
+          }, 60);
+        }, { passive: true });
+      }
     });
   </script>
 </body>

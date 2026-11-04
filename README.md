@@ -1,6 +1,6 @@
 # HackIgnite 2026 🚀
 
-**HackIgnite** is a single-page frontend website for the 24-hour inter-college coding hackathon hosted by the **Department of Computer Science & Engineering / AIML**, Jain College of Engineering and Technology (JCET), Hubballi.
+**HackIgnite** is a single-page frontend website for the **National Level 24 Hours Hackathon** hosted by the **Department of Computer Science & Engineering / AIML**, Jain College of Engineering and Technology (JCET), Hubballi.
 
 ---
 
@@ -14,17 +14,28 @@
 
 ## 🚀 Key Highlights & Event Details
 - **Registration Window**: **05-11-2026** to **10-12-2026 (Closes at 11:00 AM sharp)**
-- **Duration**: 24 Hours Continuous Non-Stop Build Sprint
+- **Duration**: National Level 24 Hours Hackathon
 - **Domain**: Development (Web & App Development) — *Problem statements revealed on-spot*
 - **Team Size**: 3 to 4 members
 - **Registration Fee**: ₹1,700 per team (Non-refundable)
 - **Date**: 12 - 13 December 2026
 - **Venue**: Jain College of Engineering and Technology, Sainagar Last Stop, near President Hotel, Hebbali Road, Unkal, Hubballi, Karnataka
-- **Step-by-Step Event Flow & Checkpoint Travel Engine**:
-  - **Live Scroll Traveler**: As you scroll down the website, a neon gradient runner travels down the timeline track, lighting up each milestone in real time with an animated Checkpoint HUD!
+- **Step-by-Step Horizontal Schedule Carousel**:
+  - **Horizontal Step Flow**: Interactive horizontal scrolling cards with stepper tabs and navigation arrows.
   - **Step 01 · Registration Phase**: 05-11-2026 to 10-12-2026, 11:00 AM (Registration kickoff, team formation, portal freeze)
   - **Step 02 · Day 1 Sprint (12 Dec 2026)**: Volunteers report (8:30 AM), check-in & on-spot topic allocation (9:30 AM), 24h coding begins (11:00 AM), ⚡ **Mentor Checkpoint 1 (6:00 PM to 7:30 PM)**
   - **Step 03 · Day 2 Finale (13 Dec 2026)**: Midnight tea (1:30 AM), ⚡ **Mentor Checkpoint 2 (6:00 AM to 7:00 AM)**, demos (10:30 AM), code freeze (11:00 AM), closing & awards (1:00 PM)
+- **Rules of Conduct and Safety**:
+  1. Harassment, discrimination, or inappropriate behaviour towards any participant, mentor, volunteer, or staff member is strictly prohibited.
+  2. Abusive language, threats, or aggressive conduct are not allowed.
+  3. Damage to venue property or equipment is not allowed.
+  4. Plagiarism, use of pre-built projects, or any form of cheating is not allowed.
+  5. Alcohol, tobacco, or any prohibited substances are not allowed on the premises.
+  6. Any team found guilty of misbehaviour or violating these rules will be disqualified immediately, with no exceptions. The decision of the organising committee is final.
+  7. These rules apply equally to coordinating members, organisers, and volunteers. Any coordinator found misbehaving or misusing their position will face strict action, including removal from the event team.
+  8. Participants are not permitted to leave the venue during the hackathon. In case of an emergency, inform a volunteer or the help desk immediately.
+  9. If you face any issue or feel unsafe at any time, contact the help desk at [location] or speak to any volunteer. All complaints will be handled promptly and with confidentiality.
+  10. Keep your belongings secure and carry your ID card at all times.
 - **Evaluation**: 100 Points Framework (25 points each across Innovation, Technical Implementation, Functionality, Demo/Presentation)
 - **Prizes**: Cash Prize Pool & Certificates of Excellence for 1st Place, 2nd Place, 3rd Place, Best Implementation, and Best Project
 
